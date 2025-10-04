@@ -48,7 +48,7 @@ void process_client_command(Client *client, const char *msg) {
             ntohs(client->addr.sin_port),cmd);
     log_message(logreq);
 
-{{ ... }}
+    if (strncmp(cmd, "AUTH ", 5) == 0) {
         const char *password = cmd + 5;
         if (strcmp(password, "admin123") == 0) {
             client->is_admin = 1;

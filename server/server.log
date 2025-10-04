@@ -1,0 +1,30 @@
+Server started.
+Car initialized.
+Client connected: 127.0.0.1:42754
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+REQ from 127.0.0.1:42754 -> AUTH Admin123
+RESP 401 AUTH FAIL
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+REQ from 127.0.0.1:42754 -> AUAUTH Admin123
+RESP 401 Not authorized
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+REQ from 127.0.0.1:42754 -> AUTH Admin123
+RESP 401 AUTH FAIL
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+REQ from 127.0.0.1:42754 -> AUTH admin123
+Client 127.0.0.1:42754 is now admin.
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
+Client disconnected: 127.0.0.1:42754
+Server started.
+Car initialized.
