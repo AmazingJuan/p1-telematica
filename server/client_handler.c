@@ -1,4 +1,5 @@
 #include "client_handler.h"
+#include "server.h"
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -7,47 +8,96 @@
 #include <arpa/inet.h>
 
 #define BUF_SIZE 1024
+#define LOGBUF_SIZE 256
+#define LOGRESP_SIZE 256
+#define LOGREQ_SIZE 256
 #define TELEMETRY_INTERVAL 10
 
 extern Car car;
-extern FILE *log_file;
+extern pthread_mutex_t car_mutex;
 
-// ---------------- Telemetría ----------------
+
+// TELEMETRÍA
+
 void send_telemetry_to_client(Client *client) {
     char buffer[BUF_SIZE];
     car_update(&car);
     car_to_json(&car, buffer, BUF_SIZE);
     send(client->fd, buffer, strlen(buffer), 0);
+
+    char logbuf[LOGBUF_SIZE];
+    snprintf(logbuf, sizeof(logbuf), "TELEM to %s:%d %s", inet_ntoa(client->addr.sin_addr), ntohs(client->addr.sin_port), buffer);
+    log_message(logbuf);
 }
 
-// ---------------- Comandos ----------------
+// COMANDOS DE ADMIN
+
 void process_client_command(Client *client, const char *msg) {
+
     char buffer[BUF_SIZE];
+    char cmd[BUF_SIZE];
+    char logreq[LOGREQ_SIZE];
+    char logresp[LOGRESP_SIZE];
 
-    if (strncmp(msg, "AUTH ", 5) == 0) {
-        char *password = (char *)(msg + 5);
-        password[strcspn(password, "\r\n")] = 0;
+    strncpy(cmd, msg, BUF_SIZE - 1);
+    cmd[BUF_SIZE - 1] = '\0';
+    cmd[strcspn(cmd, "\r\n")] = 0;
 
+    snprintf(logreq, sizeof(logreq), "REQ from %s:%d -> %s\n",
+            inet_ntoa(client->addr.sin_addr),
+            ntohs(client->addr.sin_port),cmd);
+    log_message(logreq);
+
+{{ ... }}
+        const char *password = cmd + 5;
         if (strcmp(password, "admin123") == 0) {
             client->is_admin = 1;
-            send(client->fd, "AUTH OK: You are now admin.\n", 29, 0);
+            update_client_admin(client->fd, 1);  // Actualizar en el array global
+            const char *ok = "AUTH OK: You are now admin.\n";
+            send(client->fd, ok, strlen(ok), 0);
+
             snprintf(buffer, BUF_SIZE, "Client %s:%d is now admin.\n",
-                     inet_ntoa(client->addr.sin_addr),
-                     ntohs(client->addr.sin_port));
+                    inet_ntoa(client->addr.sin_addr),
+                    ntohs(client->addr.sin_port));
             log_message(buffer);
+            
         } else {
-            send(client->fd, "AUTH FAIL: Wrong password.\n", 27, 0);
+            const char *fail = "AUTH FAIL: Wrong password.\n";
+            send(client->fd, fail, strlen(fail), 0);
+            log_message("RESP 401 AUTH FAIL\n");
         }
+        return;
     }
-    else if (client->is_admin) {
-        car_command(&car, msg, buffer, BUF_SIZE);
+
+    if (strncmp(cmd, "LIST USERS", 10) == 0) {
+        char out[BUF_SIZE];
+        list_users_into(out, sizeof(out));
+        send(client->fd, out, strlen(out), 0);
+        log_message("RESP LIST USERS sent\n");
+        return;
+    }
+
+    if (client->is_admin) {
+
+        pthread_mutex_lock(&car_mutex);
+        car_command(&car, cmd, buffer, BUF_SIZE);
+        pthread_mutex_unlock(&car_mutex);
+
         send(client->fd, buffer, strlen(buffer), 0);
+
+        snprintf(logresp, sizeof(logresp), "RESP to %s:%d -> %.*s\n", inet_ntoa(client->addr.sin_addr), ntohs(client->addr.sin_port), (int)strcspn(buffer, "\r\n"), buffer);
+        log_message(logresp);
+
     } else {
-        send(client->fd, "ERROR: Not authorized\n", 22, 0);
+        const char *err = "ERROR: Not authorized\n";
+        send(client->fd, err, strlen(err), 0);
+        log_message("RESP 401 Not authorized\n");
     }
 }
 
-// ---------------- Hilo de cliente ----------------
+
+// HILO DE CLIENTE
+
 void *client_thread(void *arg) {
     Client *client_ptr = (Client*)arg;
     Client client = *client_ptr;

@@ -1,4 +1,6 @@
 #include "server.h"
+#include "client_handler.h"
+#include "car.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,9 +11,16 @@
 static Client clients[MAX_CLIENTS];
 static int client_count = 0;
 static pthread_mutex_t clients_mutex = PTHREAD_MUTEX_INITIALIZER;
-static FILE *log_file;
 
-// ---------------- Logging ----------------
+// ESTADO DEL CARRO
+
+Car car; // Instancia del carro 
+pthread_mutex_t car_mutex = PTHREAD_MUTEX_INITIALIZER;
+
+// LOGGING
+
+static FILE *log_file = NULL;
+
 void log_message(const char *msg) {
     printf("%s", msg);
     if (log_file) {
@@ -20,8 +29,10 @@ void log_message(const char *msg) {
     }
 }
 
-// ---------------- Gestión de clientes ----------------
-void add_client(Client client) {
+// GESTIÓN DE CLIENTES
+
+void add_client(Client client) { // Añade un cliente a la lista de clientes
+
     pthread_mutex_lock(&clients_mutex);
     if (client_count < MAX_CLIENTS) {
         clients[client_count++] = client;
@@ -29,7 +40,8 @@ void add_client(Client client) {
     pthread_mutex_unlock(&clients_mutex);
 }
 
-void remove_client(int fd) {
+void remove_client(int fd) { // Elimina un cliente de la lista de clientes
+
     pthread_mutex_lock(&clients_mutex);
     for (int i = 0; i < client_count; i++) {
         if (clients[i].fd == fd) {
@@ -41,10 +53,47 @@ void remove_client(int fd) {
     pthread_mutex_unlock(&clients_mutex);
 }
 
-// ---------------- Servidor ----------------
-#include "client_handler.h"
+void update_client_admin(int fd, int is_admin) { // Actualiza el estado de admin de un cliente
 
-void start_server(int port, const char *logfile) {
+    pthread_mutex_lock(&clients_mutex);
+    for (int i = 0; i < client_count; i++) {
+        if (clients[i].fd == fd) {
+            clients[i].is_admin = is_admin;
+            break;
+        }
+    }
+    pthread_mutex_unlock(&clients_mutex);
+}
+
+void list_users_into(char *out, size_t n) { // Lista los usuarios
+
+    pthread_mutex_lock(&clients_mutex);
+    int used = snprintf(out, n, "USERS %d:", client_count);
+    for (int i = 0; i < client_count && used < (int)n; i++) {
+        char temp[64];
+        snprintf(temp, sizeof(temp), " [%s:%d%s]",
+                 inet_ntoa(clients[i].addr.sin_addr),
+                 ntohs(clients[i].addr.sin_port),
+                 clients[i].is_admin ? " ADMIN" : " OBS");
+        used = used + snprintf(out + used, n - used, "%s", temp);
+    }
+    used = used + snprintf(out + used, n - used, "\n");
+    pthread_mutex_unlock(&clients_mutex);
+}
+
+void broadcast(const char *data, size_t len) { // Envía un mensaje a todos los clientes
+    pthread_mutex_lock(&clients_mutex);
+    for (int i = 0; i < client_count; i++) {
+        send(clients[i].fd, data, len, 0);
+    }
+    pthread_mutex_unlock(&clients_mutex);
+}
+
+
+// SERVIDOR
+
+void start_server(int port, const char *logfile) { // Inicia el servidor
+
     int sockfd, newfd;
     struct sockaddr_in server_addr, client_addr;
     socklen_t client_len = sizeof(client_addr);
@@ -67,11 +116,16 @@ void start_server(int port, const char *logfile) {
         perror("listen"); exit(1);
     }
 
+    car_init(&car);
     log_message("Server started.\n");
+    log_message("Car initialized.\n");
 
     while (1) {
         newfd = accept(sockfd, (struct sockaddr*)&client_addr, &client_len);
-        if (newfd < 0) { perror("accept"); continue; }
+        if (newfd < 0) { 
+            perror("accept");
+            continue;
+        }
 
         Client client;
         client.fd = newfd;
@@ -80,6 +134,7 @@ void start_server(int port, const char *logfile) {
 
         add_client(client);
         pthread_create(&tid, NULL, client_thread, &clients[client_count-1]);
+        pthread_detach(tid);
     }
 
     close(sockfd);
