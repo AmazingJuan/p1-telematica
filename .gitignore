@@ -24,3 +24,18 @@ client-java/target/
 Thumbs.db
 
 .env
+
+.o
+*.log
+.log
+server.log
+
+AUTH
+FORWARD
+LEFT
+SLOW
+SPEED
+TURN
+Turned
+Unknown
+admin123

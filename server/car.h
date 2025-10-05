@@ -9,7 +9,7 @@ typedef struct {
 } Car;
 
 void car_init(Car *c);
-void car_update(Car *c);
+int car_update(Car *c);
 void car_command(Car *c, const char *cmd, char *response, int bufsize);
 void car_to_json(Car *c, char *buffer, int bufsize);
 

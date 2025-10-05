@@ -21,8 +21,28 @@ extern pthread_mutex_t car_mutex;
 
 void send_telemetry_to_client(Client *client) {
     char buffer[BUF_SIZE];
-    car_update(&car);
+    char alert[BUF_SIZE];
+    int stopped = 0;
+    
+    // Proteger el acceso al carro con mutex
+    pthread_mutex_lock(&car_mutex);
+    stopped = car_update(&car);
     car_to_json(&car, buffer, BUF_SIZE);
+    
+    // Si el carro se detuvo por batería baja, mostrar alerta
+    if (stopped) {
+        snprintf(alert, sizeof(alert), "ALERT: Car stopped due to low battery (%.2f%%)\n", car.battery);
+    }
+    
+    pthread_mutex_unlock(&car_mutex);
+    
+    // Enviar alerta a todos
+
+    if (stopped) {
+        broadcast(alert, strlen(alert));
+        log_message(alert);
+    }
+    
     send(client->fd, buffer, strlen(buffer), 0);
 
     char logbuf[LOGBUF_SIZE];

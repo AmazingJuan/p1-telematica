@@ -1,242 +1,33 @@
 Server started.
 Car initialized.
-Client connected: 127.0.0.1:42754
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:42754 -> AUTH Admin123
-RESP 401 AUTH FAIL
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:42754 -> AUAUTH Admin123
-RESP 401 Not authorized
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:42754 -> AUTH Admin123
-RESP 401 AUTH FAIL
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:42754 -> AUTH admin123
-Client 127.0.0.1:42754 is now admin.
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:42754 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-Client disconnected: 127.0.0.1:42754
-Server started.
-Car initialized.
-Server started.
-Car initialized.
-Client connected: 127.0.0.1:49547
-REQ from 127.0.0.1:49547 -> AUTH 
-RESP 401 AUTH FAIL
-REQ from 127.0.0.1:49547 -> 
-RESP 401 Not authorized
-TELEM to 127.0.0.1:49547 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:49547 -> 
-RESP 401 Not authorized
-REQ from 127.0.0.1:49547 -> 
-RESP 401 Not authorized
-Client disconnected: 127.0.0.1:49547
-Client connected: 127.0.0.1:49549
-TELEM to 127.0.0.1:49549 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:49549 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:49549 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:49549 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:49549 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-Client disconnected: 127.0.0.1:49549
-Server started.
-Car initialized.
-Client connected: 127.0.0.1:64506
-TELEM to 127.0.0.1:64506 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:64506 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:64506 -> LEFT
-RESP 401 Not authorized
-REQ from 127.0.0.1:64506 -> admin123
-RESP 401 Not authorized
-Client disconnected: 127.0.0.1:64506
-Client connected: 127.0.0.1:64519
-REQ from 127.0.0.1:64519 -> admin123
-RESP 401 Not authorized
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:64519 -> LEFT 
-RESP 401 Not authorized
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:64519 -> AUTH admin123
-Client 127.0.0.1:64519 is now admin.
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:64519 -> FORWARD
-RESP to 127.0.0.1:64519 -> Unknown command
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:64519 -> TURN LEFT
-RESP to 127.0.0.1:64519 -> Turned LEFT
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:64519 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"LEFT"}
-Client disconnected: 127.0.0.1:64519
-Server started.
-Car initialized.
-Client connected: 127.0.0.1:52604
-REQ from 127.0.0.1:52604 -> AUTH admin123
-Client 127.0.0.1:52604 is now admin.
-REQ from 127.0.0.1:52604 -> SPEED UP
-RESP to 127.0.0.1:52604 -> Speed increased to 10.00
-REQ from 127.0.0.1:52604 -> SLOW DOWN
-RESP to 127.0.0.1:52604 -> Speed decreased to 0.00
-REQ from 127.0.0.1:52604 -> TURN LEFT
-RESP to 127.0.0.1:52604 -> Turned LEFT
-REQ from 127.0.0.1:52604 -> TURN RIGHT
-RESP to 127.0.0.1:52604 -> Turned RIGHT
-TELEM to 127.0.0.1:52604 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52604 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52604 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52604 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52604 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-REQ from 127.0.0.1:52604 -> SLOW DOWN
-RESP to 127.0.0.1:52604 -> Speed decreased to 0.00
-REQ from 127.0.0.1:52604 -> SPEED UP
-RESP to 127.0.0.1:52604 -> Speed increased to 10.00
-REQ from 127.0.0.1:52604 -> TURN LEFT
-RESP to 127.0.0.1:52604 -> Turned LEFT
-TELEM to 127.0.0.1:52604 {"speed":10.00,"battery":99.90,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:52604 {"speed":10.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:52604 {"speed":10.00,"battery":99.70,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:52604 {"speed":10.00,"battery":99.60,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:52604 {"speed":10.00,"battery":99.50,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:52604 {"speed":10.00,"battery":99.40,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:52604 {"speed":10.00,"battery":99.30,"temperature":25.00,"direction":"LEFT"}
-Server started.
-Car initialized.
-Client connected: 127.0.0.1:57989
-REQ from 127.0.0.1:57989 -> AUTH 
-RESP 401 AUTH FAIL
-Client disconnected: 127.0.0.1:57989
-Server started.
-Car initialized.
-Client connected: 127.0.0.1:55460
-REQ from 127.0.0.1:55460 -> AUTH admin123
-Client 127.0.0.1:55460 is now admin.
-REQ from 127.0.0.1:55460 -> SPEED UP
-RESP to 127.0.0.1:55460 -> Speed increased to 10.00
-TELEM to 127.0.0.1:55460 {"speed":10.00,"battery":99.90,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:55460 -> TURN LEFT
-RESP to 127.0.0.1:55460 -> Turned LEFT
-TELEM to 127.0.0.1:55460 {"speed":10.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-REQ from 127.0.0.1:55460 -> TURN RIGHT
-RESP to 127.0.0.1:55460 -> Turned RIGHT
-REQ from 127.0.0.1:55460 -> SLOW DOWN
-RESP to 127.0.0.1:55460 -> Speed decreased to 0.00
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"RIGHT"}
-REQ from 127.0.0.1:55460 -> TURN LEFT
-RESP to 127.0.0.1:55460 -> Turned LEFT
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:55460 {"speed":0.00,"battery":99.80,"temperature":25.00,"direction":"LEFT"}
-Client disconnected: 127.0.0.1:55460
-Server started.
-Car initialized.
-Client connected: 127.0.0.1:63067
-TELEM to 127.0.0.1:63067 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:63067 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:63067 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:63067 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:63067 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:63067 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-TELEM to 127.0.0.1:63067 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-Server started.
-Car initialized.
-Server started.
-Car initialized.
-Server started.
-Car initialized.
-Server started.
-Car initialized.
-Client connected: 127.0.0.1:56596
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:56596 -> AUTH admin123
-Client 127.0.0.1:56596 is now admin.
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"STOP"}
-REQ from 127.0.0.1:56596 -> TURN RIGHT
-RESP to 127.0.0.1:56596 -> Turned RIGHT
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-Client connected: 127.0.0.1:52141
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-REQ from 127.0.0.1:56596 -> turn left
-RESP to 127.0.0.1:56596 -> Unknown command
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-REQ from 127.0.0.1:56596 -> TURN LEFT
-RESP to 127.0.0.1:56596 -> Turned LEFT
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"LEFT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"LEFT"}
-REQ from 127.0.0.1:56596 -> TURN RIGHT
-RESP to 127.0.0.1:56596 -> Turned RIGHT
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:52141 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-TELEM to 127.0.0.1:56596 {"speed":0.00,"battery":100.00,"temperature":25.00,"direction":"RIGHT"}
-Client disconnected: 127.0.0.1:52141
-Client disconnected: 127.0.0.1:56596
+Client connected: 127.0.0.1:41894
+TELEM to 127.0.0.1:41894 {"speed": 0.00, "battery": 99.00 %, "temperature": 25.00, "direction": "STOP"}
+TELEM to 127.0.0.1:41894 {"speed": 0.00, "battery": 98.00 %, "temperature": 25.00, "direction": "STOP"}
+TELEM to 127.0.0.1:41894 {"speed": 0.00, "battery": 97.00 %, "temperature": 25.00, "direction": "STOP"}
+REQ from 127.0.0.1:41894 -> AUTH admin123
+Client 127.0.0.1:41894 is now admin.
+TELEM to 127.0.0.1:41894 {"speed": 0.00, "battery": 96.00 %, "temperature": 25.00, "direction": "STOP"}
+REQ from 127.0.0.1:41894 -> LEFT
+RESP to 127.0.0.1:41894 -> Unknown command
+REQ from 127.0.0.1:41894 -> TURN LEFT
+RESP to 127.0.0.1:41894 -> Turned LEFT
+TELEM to 127.0.0.1:41894 {"speed": 0.00, "battery": 95.00 %, "temperature": 25.00, "direction": "LEFT"}
+TELEM to 127.0.0.1:41894 {"speed": 0.00, "battery": 94.00 %, "temperature": 25.00, "direction": "LEFT"}
+TELEM to 127.0.0.1:41894 {"speed": 0.00, "battery": 93.00 %, "temperature": 25.00, "direction": "LEFT"}
+REQ from 127.0.0.1:41894 -> SPEED UP
+RESP to 127.0.0.1:41894 -> Speed increased to 10.00
+REQ from 127.0.0.1:41894 -> LIST USERS
+RESP LIST USERS sent
+TELEM to 127.0.0.1:41894 {"speed": 10.00, "battery": 88.00 %, "temperature": 25.00, "direction": "LEFT"}
+REQ from 127.0.0.1:41894 -> SPEED UP
+RESP to 127.0.0.1:41894 -> Speed increased to 20.00
+TELEM to 127.0.0.1:41894 {"speed": 20.00, "battery": 83.00 %, "temperature": 25.00, "direction": "LEFT"}
+TELEM to 127.0.0.1:41894 {"speed": 20.00, "battery": 78.00 %, "temperature": 25.00, "direction": "LEFT"}
+TELEM to 127.0.0.1:41894 {"speed": 20.00, "battery": 73.00 %, "temperature": 25.00, "direction": "LEFT"}
+TELEM to 127.0.0.1:41894 {"speed": 20.00, "battery": 68.00 %, "temperature": 25.00, "direction": "LEFT"}
+TELEM to 127.0.0.1:41894 {"speed": 20.00, "battery": 63.00 %, "temperature": 25.00, "direction": "LEFT"}
+REQ from 127.0.0.1:41894 -> SPEED UP
+RESP to 127.0.0.1:41894 -> Speed increased to 30.00
+TELEM to 127.0.0.1:41894 {"speed": 30.00, "battery": 58.00 %, "temperature": 25.00, "direction": "LEFT"}
+TELEM to 127.0.0.1:41894 {"speed": 30.00, "battery": 53.00 %, "temperature": 25.00, "direction": "LEFT"}
+Client disconnected: 127.0.0.1:41894
