@@ -29,6 +29,7 @@ Thumbs.db
 *.log
 .log
 server.log
+server/server.log
 
 AUTH
 FORWARD
