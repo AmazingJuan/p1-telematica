@@ -3,6 +3,7 @@ server/server
 server/*.exe
 
 *.txt
+*.class
 logs/
 
 client-python/__pycache__/
