@@ -91,7 +91,7 @@ public class CarClient extends JFrame {
                             if (!password.isEmpty()) {
                                 out.println("AUTH " + password);
                             }
-                        } else if (line.contains("Welcome ADMIN")) {
+                        } else if (line.contains("AUTH OK") || line.contains("You are now admin")) {
                             isAdmin = true;
                             SwingUtilities.invokeLater(() -> sendButton.setEnabled(true));
                             telemetryArea.append("Modo: ADMIN\n");
