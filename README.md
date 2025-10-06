@@ -138,7 +138,7 @@ java -cp "bin;lib/json-20240303.jar" CarClient
 **Interfaz del Cliente Java:**
 1. Ingresa Host: `localhost` (o la IP del servidor)
 2. Ingresa Puerto: `5000`
-3. Contraseña (solo admin): `admin123` (dejar vacío para modo observador)
+3. Contraseña (solo admin): `admin123`
 4. Haz clic en **Conectar**
 
 ## 🔐 Autenticación
