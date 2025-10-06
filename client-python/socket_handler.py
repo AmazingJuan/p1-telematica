@@ -115,7 +115,6 @@ class SocketHandler(QtCore.QObject):
         self.message_received.emit(line)
     
     def send_command(self, command):
-        """Send a command to the server"""
         if self.socket and self.running:
             try:
                 self.socket.sendall((command + '\n').encode('utf-8'))

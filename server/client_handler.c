@@ -46,7 +46,7 @@ void send_telemetry_to_client(Client *client) {
     send(client->fd, buffer, strlen(buffer), 0);
 
     char logbuf[LOGBUF_SIZE];
-    snprintf(logbuf, sizeof(logbuf), "TELEM to %s:%d %s", inet_ntoa(client->addr.sin_addr), ntohs(client->addr.sin_port), buffer);
+    snprintf(logbuf, sizeof(logbuf), "TELEM to %s:%d: %s", inet_ntoa(client->addr.sin_addr), ntohs(client->addr.sin_port), buffer);
     log_message(logbuf);
 }
 

@@ -95,7 +95,7 @@ void car_command(Car *c, const char *cmd, char *response, int bufsize) { // Coma
         strcpy(c->direction, "RIGHT");
         snprintf(response, bufsize, "Turned RIGHT\n");
     } else {
-        snprintf(response, bufsize, "Unknown command\n");
+        snprintf(response, bufsize, "ERROR: Unknown command\n");
     }
 }
 
